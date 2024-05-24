@@ -11,6 +11,9 @@ struct ItemView: View {
     
     @Binding var currentItem: TodoItem
     
+    //Receive a referance to the view model
+    @Environment(TodoListViewModel.self) var viewModel
+    
     var body: some View {
         Label(
             title: {
@@ -20,6 +23,7 @@ struct ItemView: View {
                     // Tap to mark as done
                     .onTapGesture {
                         currentItem.done.toggle()
+                        viewModel.update(todo: currentItem)
                     }
                 
             }

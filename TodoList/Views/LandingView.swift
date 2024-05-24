@@ -59,6 +59,7 @@ struct LandingView: View {
             .navigationTitle("To do")
             
         }
+        .environment(viewModel)
     }
     
     
