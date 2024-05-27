@@ -25,28 +25,32 @@ struct LandingView: View {
         NavigationView {
             
             VStack {
-                
-                List($viewModel.todos) { $todo in
+                if viewModel.todos.isEmpty{ContentUnavailableView(
+                    "No to-do items",
+                    systemImage: "pencil.tip.crop.circle.badge.plus",
+                    description: Text("Add a reminder to get started")
+                )
 
-                    ItemView(currentItem: $todo)
-                        // Delete item
-                        .swipeActions {
-                            Button(
-                                "Delete",
-                                role: .destructive,
-                                action: {
-                                    viewModel.delete(todo)
-                                }
-                            )
-                        }
+                }else{
                     
-                }
-                .searchable(text: $searchText)
-                .onChange(of: searchText) {
-                    Task {
-                        try await viewModel.filterTodos(on: searchText)
+                    
+                    List($viewModel.todos) { $todo in
+                        
+                        ItemView(currentItem: $todo)
+                        // Delete item
+                            .swipeActions {
+                                Button(
+                                    "Delete",
+                                    role: .destructive,
+                                    action: {
+                                        viewModel.delete(todo)
+                                    }
+                                )
+                            }
+                        
                     }
                 }
+                
                 
                
                 
@@ -68,6 +72,13 @@ struct LandingView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                }
+            }
+            //handle  searching in the list
+            .searchable(text: $searchText)
+            .onChange(of: searchText) {
+                Task {
+                    try await viewModel.filterTodos(on: searchText)
                 }
             }
 
