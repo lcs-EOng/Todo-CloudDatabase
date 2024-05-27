@@ -68,7 +68,7 @@ struct LandingView: View {
             }
             .navigationTitle("To do")
             .sheet(isPresented: $presentingNewItemSheet) {
-                Text("Hello, world!")
+                NewItemView(showSheet: $presentingNewItemSheet)
                     .presentationDetents([.medium, .fraction(0.15)])
 
             }
