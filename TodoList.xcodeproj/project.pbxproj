@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2620260E2C08AE1A00ADEA85 /* ToolListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2620260D2C08AE1A00ADEA85 /* ToolListViewModel.swift */; };
 		262026102C08AE2D00ADEA85 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2620260F2C08AE2D00ADEA85 /* LandingView.swift */; };
+		262026122C08AF7D00ADEA85 /* TodoItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262026112C08AF7D00ADEA85 /* TodoItemImage.swift */; };
 		2694BA9B2BFE4CCA00B73D74 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 2694BA9A2BFE4CCA00B73D74 /* Auth */; };
 		2694BA9D2BFE4CCA00B73D74 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 2694BA9C2BFE4CCA00B73D74 /* Functions */; };
 		2694BA9F2BFE4CCA00B73D74 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 2694BA9E2BFE4CCA00B73D74 /* PostgREST */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2620260D2C08AE1A00ADEA85 /* ToolListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolListViewModel.swift; sourceTree = "<group>"; };
 		2620260F2C08AE2D00ADEA85 /* LandingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		262026112C08AF7D00ADEA85 /* TodoItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemImage.swift; sourceTree = "<group>"; };
 		2694BAA62BFE4F3400B73D74 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		26C410532C05071100E39AC6 /* AppEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntryView.swift; sourceTree = "<group>"; };
 		26C410552C05072600E39AC6 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				2620260D2C08AE1A00ADEA85 /* ToolListViewModel.swift */,
+				262026112C08AF7D00ADEA85 /* TodoItemImage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				26C410582C05107C00E39AC6 /* NewItemView.swift in Sources */,
 				2694BAA72BFE4F3400B73D74 /* Supabase.swift in Sources */,
 				814A08FC2BC41BC500921E4F /* ItemView.swift in Sources */,
+				262026122C08AF7D00ADEA85 /* TodoItemImage.swift in Sources */,
 				26C410542C05071100E39AC6 /* AppEntryView.swift in Sources */,
 				814A08FE2BC41C7800921E4F /* TodoItem.swift in Sources */,
 				2620260E2C08AE1A00ADEA85 /* ToolListViewModel.swift in Sources */,
