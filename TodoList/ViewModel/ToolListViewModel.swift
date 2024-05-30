@@ -119,6 +119,26 @@ class TodoListViewModel {
         
         return filePath
     }
+    func downloadTodoItemImage(fromPath path: String) async throws -> TodoItemImage? {
+        
+        // Attempt to download an image from the provided path
+        do {
+            let data = try await supabase
+                .storage
+                .from("todos_images")
+                .download(path: path)
+            
+            return TodoItemImage(rawImageData: data)
+            
+        } catch {
+            debugPrint(error)
+        }
+        
+        // If we landed here, something went wrong, so return nil
+        return nil
+        
+    }
+
 
     
     func delete(_ todo: TodoItem) {
